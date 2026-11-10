@@ -1,0 +1,143 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+figure,
+p,
+ol,
+ul {
+	margin: 0;
+}
+
+ol[role="list"],
+ul[role="list"] {
+	list-style: none;
+	padding-inline: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-size: inherit;
+	font-weight: inherit;
+}
+
+img {
+	display: block;
+	max-inline-size: 100%;
+}
+
+html {
+	font-family: "Jost", sans-serif;
+}
+body {
+	position: relative;
+}
+
+.main {
+	background: url('img/bg.jpg') center center / cover no-repeat;
+	min-height: 100vh;
+	padding: 61px 28px 0 28px;
+	position: relative;
+	z-index: 2;
+}
+
+.header {
+	margin: 0 auto;
+	border-radius: 100px;
+	width: 602px;
+	height: 50px;
+	background: rgba(238, 238, 242, 0.6);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.header__text {
+	font-weight: 600;
+	font-size: 34px;
+	letter-spacing: 0.24em;
+	color: #910926;
+}
+
+.legends__items {
+	margin-top: 144px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: start;
+}
+
+.legends__item {
+	width: 234px;
+	height: 464px;
+}
+
+img {
+	width: 100%;
+}
+
+.video__bg {
+	position: absolute;
+	height: 100vh;
+	width: 100%;
+	z-index: 1;
+	background: rgba(255, 255, 255, 0.8);
+	top: 0px;
+	left: 0px;
+	opacity: 0;
+	transform: scale(0.95);
+	transition: opacity 0.3s ease, transform 0.3s ease, z-index 0s;;
+	overflow: hidden;
+}
+
+.video__content {
+	margin: 114px auto 0 auto;
+	width: 367px;
+height: 500px;
+}
+.video {
+	max-height: 100%;
+}
+
+.active {
+	z-index: 3;
+	opacity: 1;
+	transform: scale(1);
+}
+
+.info-sidebar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  /* width: 350px; */
+	width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px); /* Красивое размытие видео под блоком */
+  z-index: 2;
+  
+  transform: translateX(100%);
+  
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.info-sidebar.active {
+  transform: translateX(0);
+}
+
+.sidebar-content {
+  /* padding: 40px 30px; */
+	padding: 40px 0;
+}
+.close-btn {
+  background: none;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 8px 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
